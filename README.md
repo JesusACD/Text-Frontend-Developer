@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Test - Frontend Developer
 
-## Getting Started
+Este es mi proyecto de prueba para la posición de Frontend Developer, desarrollado con React, Next.js, y TailwindCSS. A continuación, te explico cómo configurarlo y ejecutarlo en tu máquina local para su revisión.
 
-First, run the development server:
+## Comenzando 🚀
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+_Puedes ver el proyecto desplegado en el siguiente enlace:_
+🔗 https://text-frontend-developer.vercel.app/
+
+Mira **Deployment** para conocer como desplegar el proyecto.
+
+### 📋 Requerimientos previos
+
+_Asegúrate de tener instaladas las siguientes herramientas en tu entorno:_
+
+- Node.js (versión 14 o superior)
+- Git
+
+```
+Da un ejemplo
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Instrucciones para ejecutar en local 🔧
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+_Sigue estos pasos para correr el proyecto en tu entorno local:_
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+_1. Clona este repositorio:_
 
-## Learn More
+```
+git clone https://github.com/JesusACD/Text-Frontend-Developer.git
+cd Text-Frontend-Developer
 
-To learn more about Next.js, take a look at the following resources:
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+_2. Instala las dependencias:_
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+npm install
+```
 
-## Deploy on Vercel
+_3. Ejecuta el servidor de desarrollo_
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+
+_4. Abre tu navegador y visita:_
+http://localhost:3000
+
+¡Listo! Ahora deberías ver la aplicación en funcionamiento en tu máquina.
+
+## 📐 Tecnologías y herramientas utilizadas
+
+- **React**: Biblioteca de JavaScript para construir interfaces de usuario.
+- **Next.js**: Framework de React para aplicaciones web optimizadas y renderizadas del lado del servidor.
+- **TailwindCSS**: Framework de utilidades CSS para un diseño más rápido y personalizable.
+
+### 📑 Notas adicionales
+
+_Este proyecto fue diseñado siguiendo los puntos principales en cuanto a UI, UX, animaciones, y validaciones. Hice mi mejor esfuerzo por implementar el diseño visual solicitado y la lógica de negocio básica en el tiempo disponible. No pude completar todas las funcionalidades por falta de tiempo, pero me aseguré de seguir la línea de diseño y cumplir con la lógica principal solicitada. Hice mi mejor esfuerzo en entregar un resultado fiel a las expectativas._
