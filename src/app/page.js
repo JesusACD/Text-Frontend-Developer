@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Nav from "@/components/Nav/Nav";
@@ -42,9 +43,11 @@ const LandingPage = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua
                 </p>
               </div>
-              <button className="w-44 h-20 text-[27px] font-bold uppercase px-6 py-2 mt-4 text-white bg-backgroundBlue hover:bg-blue-600">
-                Login
-              </button>
+              <Link href="/login" legacyBehavior>
+                <button className="w-44 h-20 text-[27px] font-bold uppercase px-6 py-2 mt-4 text-white bg-backgroundBlue hover:bg-blue-600">
+                  Login
+                </button>
+              </Link>
             </div>
 
             <div className="md:w-auto mt-8 md:mt-0 flex justify-center">
