@@ -1,10 +1,11 @@
 "use client";
 import { useState } from "react";
 import { userDataMockeados, products } from "@/utils/mockData";
-import Autocomplete from "../AutocompleteForm/AutocompleteForm";
+import Autocomplete from "../../../components/AutocompleteForm/AutocompleteForm";
 import { formatNumber, showSubtotal } from "@/utils/functions";
-import Head from "../Head/Head";
+import Head from "../../../components/Head/Head";
 import useOrderCRUD from "@/app/store/store";
+import { toast } from "react-toastify";
 
 const NewSaleForm = () => {
   const { createOrder } = useOrderCRUD();
@@ -93,10 +94,30 @@ const NewSaleForm = () => {
       branchOffice,
       currency,
       total,
-      datails: items,
+      details: items,
     };
     createOrder(data);
-    console.log(data);
+    try {
+      toast.success("Form sent successfully!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } catch (error) {
+      toast.error("Error sending the form. Please try again.", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
   };
 
   return (

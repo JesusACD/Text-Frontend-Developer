@@ -1,4 +1,3 @@
-import { nanoid } from "nanoid";
 import { useState, useEffect, useCallback } from "react";
 
 const Autocomplete = ({
@@ -79,7 +78,7 @@ const Autocomplete = ({
         <ul className="absolute left-0 right-0 z-10 w-full mt-2 overflow-hidden bg-white border border-gray-300 rounded-md shadow-lg max-h-48">
           {filteredOptions.map((option, index) => (
             <li
-              key={nanoid()}
+              key={index}
               className="p-2 cursor-pointer hover:bg-blue-500 hover:text-white"
               onClick={() => handleOptionClick(option)}
             >

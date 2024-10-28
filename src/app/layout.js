@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = localFont({
   src: "./fonts/OpenSans-Bold.ttf",
@@ -15,7 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable}`}>{children}</body>
+      <body className={`${geistSans.variable}`}>
+        {children} <ToastContainer />
+      </body>
     </html>
   );
 }
