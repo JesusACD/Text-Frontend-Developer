@@ -10,7 +10,7 @@ const Sales = () => {
     <>
       <Head title="Sales" />
       {orders.length <= 0 ? (
-        <div className="flex justify-center items-center h-screen font-extrabold text-3xl text-spaceCadet">
+        <div className="flex justify-center p-4 w-full mt-10 font-extrabold text-3xl text-spaceCadet">
           No orders to display.
         </div>
       ) : null}
