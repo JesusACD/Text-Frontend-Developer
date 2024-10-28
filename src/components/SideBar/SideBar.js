@@ -45,8 +45,14 @@ const SideBar = () => {
       </Link>
 
       {/* Icono de Carpeta */}
-      <Link href="/carpeta" legacyBehavior>
-        <a className="text-white hover:bg-blue-500 p-6">
+      <Link href="/dashboard/files" legacyBehavior>
+        <a
+          className={`text-white p-6 ${
+            pathname === "/dashboard/files"
+              ? "bg-blue-500"
+              : "hover:bg-blue-500"
+          }`}
+        >
           <img src="/recurso11.png" alt="Folder" className="h-4 w-4" />
         </a>
       </Link>
