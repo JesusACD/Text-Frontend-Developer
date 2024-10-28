@@ -8,10 +8,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
+        background: "var(--background-image)",
+        backgroundBlue: "var(--backgroundBlue)",
         foreground: "var(--foreground)",
+        blueGray: "var(--blueGray)",
+        spaceCadet: "var(--spaceCadet)",
+      },
+      fontFamily: {
+        sans: ["Open Sans", "sans-serif"],
+      },
+      fontWeight: {
+        extrabold: "800",
+        semibold: "400",
+      },
+      fontSize: {
+        "7-5xl": "88px",
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

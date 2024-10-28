@@ -1,21 +1,27 @@
+@import "@fontsource/open-sans";
+@import "@fontsource/open-sans/800.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --background: #ffffff;
+  --backgroundBlue: #279aff;
   --foreground: #171717;
+  --background-image: #f6f7fa;
+  --blueGray: #99a4b6;
+  --spaceCadet: #192843;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    /* --background: #0a0a0a; */
     --foreground: #ededed;
   }
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: var(--background-image);
   font-family: Arial, Helvetica, sans-serif;
 }

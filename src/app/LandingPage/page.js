@@ -1,35 +1,25 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
-import Nav from "@/components/Nav/Nav";
 const recursos = ["/recurso7.png", "/recurso8.png", "/recurso7.png"];
 const LandingPage = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const toTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  const handleScroll = () => {
-    const altura = window.scrollY;
-    if (altura > 500) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     <div>
       <div className="bg-[url('/recurso1.svg')] min-h-screen bg-[length:68%_auto] bg-no-repeat bg-right font-sans">
         <div className="container mx-auto">
-          <Nav />
+          <nav className="flex justify-end p-4 space-x-6 text-spaceCadet font-bold scroll-smooth focus:scroll-auto">
+            <a
+              href="#content-1"
+              className="hover:text-gray-900 scroll-smooth focus:scroll-auto"
+            >
+              Content 1
+            </a>
+            <a href="#content-2" className="hover:text-gray-900">
+              Content 2
+            </a>
+            <a href="#" className="text-blue-500 hover:text-blue-700">
+              Login
+            </a>
+          </nav>
 
           <section className="flex flex-col md:flex-row items-center justify-center min-h-screen">
             <div className="md:w-1/2 space-y-28 text-center md:text-left">
@@ -142,30 +132,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <footer className="bg-backgroundBlue py-20">
-        {isVisible && (
-          <button
-            id="btn-to-top"
-            className="fixed bottom-10 right-10 p-4 bg-blue-600 text-white rounded-full hover:bg-blue-700"
-            onClick={toTop}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M5 15l7-7 7 7"
-              />
-            </svg>
-          </button>
-        )}
-      </footer>
+      <footer className="bg-backgroundBlue py-20"></footer>
     </div>
   );
 };
