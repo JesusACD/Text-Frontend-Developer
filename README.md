@@ -16,10 +16,6 @@ _Asegúrate de tener instaladas las siguientes herramientas en tu entorno:_
 - Node.js (versión 14 o superior)
 - Git
 
-```
-Da un ejemplo
-```
-
 ### Instrucciones para ejecutar en local 🔧
 
 _Sigue estos pasos para correr el proyecto en tu entorno local:_
