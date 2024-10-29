@@ -27,7 +27,7 @@ const LandingPage = () => {
     };
   }, []);
   return (
-    <div>
+    <div className="bg-white">
       <div className="bg-[url('/recurso1.svg')] min-h-screen bg-[length:68%_auto] bg-no-repeat bg-right font-sans">
         <div className="container mx-auto">
           <Nav />
