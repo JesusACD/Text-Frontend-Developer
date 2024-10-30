@@ -19,12 +19,19 @@ const Login = () => {
     <div className="h-screen flex justify-center items-center bg-white">
       <div className="max-w-md w-full bg-background p-10 rounded-none shadow-none">
         <h2 className="text-spaceCadet text-3xl mb-5 font-bold">Login</h2>
-        <p className="text-spaceCadet text-sm mb-5">
-          Credenciales para acceso rápido:
-          <br />
-          - Usuario: admin
-          <br />- Contraseña: admin
-        </p>
+        <div className="mb-5 p-5 bg-gray-100 border border-gray-300 rounded-lg">
+          <h3 className="text-spaceCadet text-lg font-bold mb-2">
+            Credenciales para acceso rápido:
+          </h3>
+          <ul className="list-none m-0 p-0 text-spaceCadet text-sm">
+            <li className="mb-2">
+              <span className="font-bold">Usuario:</span> admin
+            </li>
+            <li>
+              <span className="font-bold">Contraseña:</span> admin
+            </li>
+          </ul>
+        </div>
         <form onSubmit={handleSubmit}>
           <label
             className="block text-spaceCadet text-lg mb-2"
