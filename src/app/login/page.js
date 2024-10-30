@@ -19,6 +19,12 @@ const Login = () => {
     <div className="h-screen flex justify-center items-center bg-white">
       <div className="max-w-md w-full bg-background p-10 rounded-none shadow-none">
         <h2 className="text-spaceCadet text-3xl mb-5 font-bold">Login</h2>
+        <p className="text-spaceCadet text-sm mb-5">
+          Credenciales para acceso rápido:
+          <br />
+          - Usuario: admin
+          <br />- Contraseña: admin
+        </p>
         <form onSubmit={handleSubmit}>
           <label
             className="block text-spaceCadet text-lg mb-2"
