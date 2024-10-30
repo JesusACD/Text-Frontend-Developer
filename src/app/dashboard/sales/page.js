@@ -5,7 +5,6 @@ import Link from "next/link";
 
 const Sales = () => {
   const { orders } = useOrderCRUD();
-  console.log("orders", orders);
 
   return (
     <>

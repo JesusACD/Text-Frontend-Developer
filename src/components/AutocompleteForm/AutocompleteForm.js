@@ -5,8 +5,10 @@ const Autocomplete = ({
   className = "",
   onSelect,
   value,
-  onChange,
   isProduct = undefined,
+  error,
+  onBlur,
+  name,
 }) => {
   const [inputValue, setInputValue] = useState(value || "");
   const [filteredOptions, setFilteredOptions] = useState([]);
@@ -47,33 +49,33 @@ const Autocomplete = ({
   const handleInputChange = (e) => {
     const value = e.target.value;
     setInputValue(value);
-    onChange && onChange(value);
+    onSelect && onSelect(value);
     debounceFilter(value);
   };
 
   // Selecciona una opción y llama a la función de selección externa
   const handleOptionClick = (option) => {
-    console.log("option", option);
     setInputValue(option);
     setFilteredOptions([]);
     setTimeout(() => setShowOptions(false), 0);
 
-    console.log("isProduct", isProduct);
-
     onSelect &&
       (typeof isProduct !== "undefined"
-        ? onSelect(isProduct, option)
-        : onSelect(option));
+        ? onSelect(option, isProduct)
+        : onSelect(option, true));
   };
 
   return (
-    <div className={`relative ${className}`}>
+    <div className="relative min-h-[75px]">
       <input
         type="text"
-        className="w-full p-3 outline-none border-none focus:border-transparent focus:ring-0"
+        className={`w-full p-3 outline-none border-none focus:border-transparent focus:ring-0 ${className}`}
         value={inputValue}
         onChange={handleInputChange}
+        onBlur={onBlur}
+        name={name}
       />
+      {error && <span className="text-red-500 text-xs mt-1">{error}</span>}
       {showOptions && filteredOptions.length > 0 && (
         <ul className="absolute left-0 right-0 z-10 w-full mt-2 overflow-hidden bg-white border border-gray-300 rounded-md shadow-lg max-h-48">
           {filteredOptions.map((option, index) => (
