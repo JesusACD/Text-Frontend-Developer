@@ -8,6 +8,7 @@ import Head from "../../../components/Head/Head";
 import useOrderCRUD from "@/app/store/store";
 import { toast } from "react-toastify";
 import validationSchema from "@/app/validations/saleValidation";
+import AddClientModal from "@/components/Modal/AddClientModal";
 
 const NewSaleForm = () => {
   const { createOrder } = useOrderCRUD();
@@ -202,62 +203,12 @@ const NewSaleForm = () => {
                 </button>
               </div>
 
+              <AddClientModal
+                isOpen={showClientForm}
+                onClose={() => setShowClientForm(!showClientForm)}
+              />
+
               {/* Modal para agregar cliente */}
-              {showClientForm && (
-                <div className="z-50 fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-75">
-                  <div className="bg-white p-6 rounded-lg w-96">
-                    <h2 className="text-xl font-bold mb-4">Agregar Cliente</h2>
-                    <div className="space-y-2">
-                      <input
-                        type="text"
-                        placeholder="Nombre"
-                        id="clientName"
-                        className="p-2 w-full outline-none border"
-                      />
-                      <input
-                        type="text"
-                        placeholder="RUT"
-                        id="clientRUT"
-                        className="p-2 w-full outline-none border"
-                      />
-                      <input
-                        type="text"
-                        placeholder="Dirección"
-                        id="clientAddress"
-                        className="p-2 w-full outline-none border"
-                      />
-                      <input
-                        type="text"
-                        placeholder="Teléfono"
-                        id="clientPhone"
-                        className="p-2 w-full outline-none border"
-                      />
-                    </div>
-                    <div className="flex justify-end gap-3 mt-4">
-                      <button
-                        type="button"
-                        onClick={() => setShowClientForm(false)}
-                        className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
-                      >
-                        Cancelar
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          const newClient = {
-                            id: clients.length + 1,
-                            name: document.getElementById("clientName").value,
-                          };
-                          handleAddClient(newClient);
-                        }}
-                        className="px-4 py-2 bg-backgroundBlue text-white rounded hover:bg-blue-600"
-                      >
-                        Guardar
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              )}
 
               <div className="flex flex-col gap-1 w-full">
                 <label htmlFor="branch-office" className="font-bold">
